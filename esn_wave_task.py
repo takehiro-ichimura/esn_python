@@ -18,7 +18,6 @@ def rand_gen(num, u_bar, r):
     return test_data
 
 
-
 def main():
     num = 10000
     reservoir_num = 50
@@ -53,7 +52,7 @@ def main():
         #print(net.forward(input_data[i]))
         out[i] = net.forward(input_data[i])
         cost[i] = net.cost(input_data[i], teach_signal[i])
-        if i<len(wave)*10:reservoir_plot[i] = net.reservoir_neuron
+        if i < len(wave)*10:reservoir_plot[i] = net.reservoir_neuron
         #print(cost[i])
         net.update(input_data[i], teach_signal[i], eta=0.3)
 
